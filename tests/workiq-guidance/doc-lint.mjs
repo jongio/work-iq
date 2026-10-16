@@ -153,6 +153,7 @@ export const policies = [
   ['R.C3', 'references/mail-work-iq.md', /createReply/, 'persist reply drafts with reply linkage'],
   ['R.C3', 'references/mail-work-iq.md', /isDraft/, 'exclude unsent drafts from exchanged history'],
   ['R.C6', 'references/teams-work-iq.md', /tenantId|tenant identity|tenant.*field/i, 'retain required member tenant identity'],
+  ['R.C6', 'references/teams-work-iq.md', /contentType.{0,40}html[\s\S]{0,500}(?:<a|descriptive link)[\s\S]{0,500}(?:Markdown|raw URL)/i, 'format structured Teams messages as safe HTML'],
   ['R.C5', 'references/call-function-work-iq.md', /(?:checkpoint|initial.sync)/i, 'distinguish initial sync from saved checkpoint'],
   ['R.C4', 'references/troubleshooting.md', /(?:202|accepted)[\s\S]{0,150}(?:pending|complet)/i, 'accepted is not completed'],
   ['R.C4', 'references/troubleshooting.md', /412|precondition/i, 'reconcile precondition failures'],
